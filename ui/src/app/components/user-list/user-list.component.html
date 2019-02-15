@@ -1,0 +1,28 @@
+<div class="text-center">
+  <h2>Users List</h2>
+</div>
+<div class='card'>
+    <div class='card-body'>
+        <div id="users-container"  class="container h-100">
+            <div class="row h-100 justify-content-center align-items-center">
+            <div class="col-sm-4 col-md-3 card-container m-4"  *ngFor="let user of data">
+                <div class="caption">
+                  <div class="card-body text-center">
+                  <img src="{{user.picture.thumbnail}}" class="mx-auto d-block thumbpic card-img-top float-left m-4">
+                  <ul class=" list-unstyled">
+                    <li>First Name: {{ user.name.first}}</li>
+                    <li>Gender: {{ user.gender }} </li>
+                    <li>Age: {{ user.dob.age }}</li>
+                    <li>Phone: {{ user.cell }}</li>
+                  </ul>
+                  <p class="card-text"></p>
+                  <button class="btn btn-outline-success" (click)="viewUserDetails(user)"  type="button">View More Details</button>
+                </div>
+              </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

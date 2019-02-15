@@ -1,0 +1,35 @@
+#users-container {
+  /* div{
+    &.card-container {
+      border: 5px solid #ccc;
+    border-radius: 10px;
+
+    }
+    &.blue-user {
+      background-color: #c9e5b6;
+    }
+  &.pink-user {
+    background-color:pink;
+  }
+  img {
+    &.thumbpic {
+      border-radius: 50%;
+      width: 150px;
+      margin: 0 auto;
+      position: relative;
+      left: 25%;
+      padding-top: 5%;
+    }
+  }*/
+  img {
+    &.thumbpic {
+      border-radius: 50%;
+    }
+  }
+  div {
+    &.card-container {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+}
+}

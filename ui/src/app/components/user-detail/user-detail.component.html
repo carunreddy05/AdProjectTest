@@ -1,0 +1,31 @@
+<div class="text-center">
+  <h2>User Details of {{userDetailData.name.last}}</h2>
+</div>
+<div class='card'>
+<div class='card-body'>
+    <div class="container h-100" >
+        <div class="row h-100 justify-content-center align-items-center">
+
+          <div class="col-md-12 row">
+              <div class="col-md-3">
+                  <img src="{{userDetailData?.picture.medium}}" class="mx-auto d-block thumbpic card-img-top float-left m-4">
+              </div>
+              <div class="col-md-9 mt-4">
+                  <ul class=" list-unstyled">
+                      <li><h4>Full Name: {{ userDetailData.name.title + ' ' + userDetailData.name.first + ' ' +userDetailData.name.last}}</h4></li>
+                      <li>Gender: {{ userDetailData.gender }} </li>
+                      <li>Age: {{ userDetailData.dob.age }}</li>
+                      <li>Email Address: <a [href]="userDetailData.email">{{userDetailData.email}}</a> </li>
+                      <li>Phone: {{ userDetailData.cell }}</li>
+                      <li>Address: {{ userDetailData.location.street + ', ' +userDetailData.location.city + ', '+userDetailData.location.state+ ', ' +userDetailData.location.postcode}}</li>
+                      <li>Timezone: {{ userDetailData.location.timezone.description }} </li>
+                    </ul>
+                    <a class='btn btn-outline-success' [routerLink]="['/']">Back</a>
+              </div>
+          </div>
+        </div>
+      </div>
+</div>
+</div>
+
+

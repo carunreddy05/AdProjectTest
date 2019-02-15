@@ -1,0 +1,7 @@
+
+<div *ngIf="!showUserDetails">
+  <pm-user-list [userData]="userList" (showUserDetails)="showUserDetailsCheck($event)" (selectedUserData)="getSelectedUserInfo($event)"></pm-user-list>
+</div>
+<div *ngIf="showUserDetails">
+    <pm-user-detail [userData]="selectedUserData"></pm-user-detail>
+</div>
